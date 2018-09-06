@@ -1,0 +1,20 @@
+<section class="contact-wrapper l-section-pd">
+    <div class="container">
+        <div class="row" id="primary">		
+            <div id="content" class="col-sm-12">	
+                <section lass="post-type-{{post.post_type}}" id="post-{{post.ID}}>
+                    <form role="form" class="clearfix">
+                        <div class="row l-flex-row-bottom">
+                            <div class="col-sm-6">
+                                <h3 class="contact-title-text">Get in touch. I&rsquo;ll do my best to get back to you ASAP.</h3>
+                                <hr class="contact-title-hr"/>
+                                {{post.get_field('custom_form_shortcode')}}
+                            <div class="col-sm-6">
+                            </div>
+                        </div>
+                    </form>
+                </section>	
+            </div><!-- content -->			
+        </div><!-- primary -->
+    </div><!-- container -->
+</section>

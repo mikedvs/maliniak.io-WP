@@ -1,0 +1,17 @@
+{% if menu %}
+	<div class="nav-bar-btn nav-controller nav-col nav-absolute">
+		<div class="nav-con">
+			<div class="nav-bar nav-top nav-x"></div>
+			<div class="nav-bar nav-middle nav-x"></div>
+			<div class="nav-bar nav-bottom nav-x"></div>
+		</div>
+	</div>
+	<ul>
+	{% for item in menu %}
+		<li class="{{ item.classes | join(' ') }}">
+			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+			{% include "menu.twig" with {'menu': item.get_children} %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

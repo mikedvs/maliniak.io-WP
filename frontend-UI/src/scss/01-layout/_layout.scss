@@ -1,0 +1,25 @@
+@import '../_globals/config';
+@import '../_globals/mixins';
+
+/* layput */
+
+@include breakpoint(sm) {
+	.l-flex-row-center {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@include breakpoint(sm) {
+	.l-flex-row-bottom {
+		display: flex;
+		align-items: bottom;
+	}
+}
+
+.l-section-pd {
+    padding: $padding-sm 0;
+    @include breakpoint(sm) {
+        padding: $padding-md 0;
+    }
+}

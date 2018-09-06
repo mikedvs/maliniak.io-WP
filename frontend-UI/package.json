@@ -1,0 +1,27 @@
+{
+  "name": "frontend-ui",
+  "version": "1.0.0",
+  "description": "Source code for UNSW Global front-end UI styles",
+  "main": "index.js",
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar src/scss/ -o dist/css --output-style compressed",
+    "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+    "build-task:uglify-js": "mkdir -p dist/js && uglifyjs src/js/*.js -m -o dist/js/custom.js",
+    "build-task:copy-css": "copyfiles -u 1 dist/css/*.css ../wp-content/themes/maliniaktimbertheme/static",
+    "build-task:copy-js": "copyfiles -u 1 dist/js/*.js ../wp-content/themes/maliniaktimbertheme/static",
+    "sass:build": "npm-run-all -s build-task:*",
+    "sass:watch": "chokidar 'src/**/**/*' -c 'npm run sass:build'",
+    "dev": "npm-run-all -s sass:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "chokidar-cli": "^1.2.0",
+    "copyfiles": "^1.2.0",
+    "node-sass-chokidar": "^0.0.1",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.0.0"
+  }
+}

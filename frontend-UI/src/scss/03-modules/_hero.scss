@@ -1,0 +1,31 @@
+/* HERO */
+
+#hero {
+	height: 75vh; // full-height of viewport 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: url('../img/background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hero-title em {
+	font-family: 'Oswald', sans-serif;
+	font-size: 15vh;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: -4px;
+	@include breakpoint(sm) {
+		font-size: 22vh;
+	}
+}
+.hero-title_sub {
+	font-family: 'Oswald', sans-serif;
+	display: block;
+	font-size:4vh;
+	color: white;
+	@include breakpoint(sm) {
+		font-size: 7vh;
+	}
+}

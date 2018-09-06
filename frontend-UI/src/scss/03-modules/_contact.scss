@@ -1,0 +1,103 @@
+/* ==== CONTACT ==== */
+
+.contact-wrapper {
+	background-color: $bg-color-dark;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	font-family: $font-primary;
+	font-weight: 100;
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 6px 12px;
+}
+
+input[type="submit"],
+button[type="submit"] {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: bold;
+	line-height: 1.33;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: none;
+	border-radius: 0;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+	outline: none;
+	border: none;
+	background: $color-secondary;
+}
+
+form.search-form .form-group {
+	margin: 0;
+}
+
+form.search-form .input-group {
+	width: 100%;
+}
+
+form.search-form .input-group input[type="search"],
+form.search-form .input-group input[type="text"] {
+	width: 70%;
+}
+
+form.search-form .input-group input[type="submit"] {
+	width: 30%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	float: right;
+}
+
+form textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.contact-title-wrapper {
+	margin-bottom: 5vh;
+}
+
+.contact-title-hr {
+	border-top: 1px solid #6e6e6e;
+}
+
+.contact-title-text {
+	color: #fff;
+}
+
+.contact-btn {
+	background-color: $color-primary;
+	border-radius: 0;
+	color: #ffffff;
+	&:hover {
+		background-color: darken($color-primary, 20%);
+	}
+}

@@ -1,0 +1,38 @@
+@import 'config';
+
+@mixin breakpoint($class) {
+    @if $class==sm {
+        @media (min-width: $screen-sm) {
+            @content;
+        }
+    }
+    @else if $class==md {
+        @media (min-width: $screen-md) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: sm, md";
+    }
+}
+
+@mixin max-breakpoint($class) {
+    @if $class==sm {
+        @media (max-width: $screen-sm-max) {
+            @content;
+        }
+    }
+    @else if $class==md {
+        @media (max-width: $screen-md-max) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: sm, md";
+    }
+}
+
+//     Example how to use
+//     @include breakpoint(md) {
+//          font-size: 15px;
+//     }

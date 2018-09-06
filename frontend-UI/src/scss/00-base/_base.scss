@@ -1,0 +1,33 @@
+@import '../_globals/config';
+@import '../_globals/colors';
+@import '../_globals/mixins';
+
+/* Type will scale with modules */
+
+/* BASE */
+
+html, body {
+	font-family: $font-primary;
+	color: #6E6E6E;
+	font-size: 14px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $font-secondary;
+}
+
+p {
+	font-family: $font-primary;
+	color: #666666;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+section {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}

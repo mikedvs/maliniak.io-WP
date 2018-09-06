@@ -1,0 +1,15 @@
+@import 'colors';
+
+// SCREEN SIZES
+
+$screen-sm: 768px;
+$screen-md: 992px;
+
+$screen-sm-max: ($screen-sm -1px);
+$screen-md-max: ($screen-md -1px);
+
+// PADDING
+
+$padding-xs: 2vh;
+$padding-sm: 5vh;
+$padding-md: 10vh;

@@ -1,0 +1,108 @@
+// Navigation Styles
+.nav-wrapper {
+	position: relative;
+	z-index: 10;
+}
+.nav-bar-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	li a {
+		color: $color-secondary;
+	}
+}
+.nav-controller {
+	cursor: pointer;
+	color: $color-secondary;
+	display: inline-block;
+}
+
+.nav-right {
+	float: right;
+}
+.nav-main {
+	height: 100%; /* 100% Full-height */
+    width: 200px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 11; /* Stay on top */
+    top: 0;
+    transform: translateX(-200px);
+    background-color: $bg-color-dark;/* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place nav-content 60px from the top */
+	transition: 0.5s;
+	box-shadow: none; /* 0.5 senav-cond transition effect to slide in the sidenav */
+}
+
+.nav-col {
+	display: inline-block;
+	text-align: center;
+	height: auto;
+	position: relative;
+	padding:10px 20px;
+}
+
+.nav-con {
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: $color-secondary;
+  margin: 5px auto;
+  transition: all .7s ease;
+}
+.nav-middle {
+  margin: 0 auto;
+}
+
+.nav-x {
+	color: $color-secondary;
+}
+
+// nav-open state changes
+// -----------------------
+
+.nav-open .nav-main {
+	transform: translateX(0);
+}
+
+// Always shaped as an 'X'
+
+.nav-absolute {
+	position: absolute;
+	top:0;
+	right:0;
+}
+.nav-bar.nav-x {
+	color: $color-primary;
+	background: $color-primary;
+}
+.nav-top.nav-x {
+	transform: translateY(8px) rotateZ(45deg);
+}
+.nav-bottom.nav-x {
+	transform: translateY(-8px) rotateZ(-45deg);
+}
+.nav-middle.nav-x {
+	width: 0;
+}
+
+.nav-open {
+	.nav-top {
+		transform: translateY(8px) rotateZ(45deg);
+	}
+	.nav-bottom {
+		transform: translateY(-8px) rotateZ(-45deg);
+	}
+	.nav-middle {
+		width: 0;
+	}
+}
